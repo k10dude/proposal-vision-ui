@@ -2,41 +2,72 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* LOP Review Interface Design System */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 248 50% 98%;
+    --foreground: 215 25% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 215 25% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 215 25% 12%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 215 100% 47%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 215 25% 12%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 15% 55%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 215 25% 12%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 13% 91%;
+    --input: 220 13% 95%;
+    --ring: 215 100% 47%;
 
-    --radius: 0.5rem;
+    /* Confidence Level Colors */
+    --confidence-high: 122 39% 49%;
+    --confidence-high-foreground: 0 0% 100%;
+    --confidence-high-bg: 122 39% 95%;
+    --confidence-high-border: 122 39% 85%;
+
+    --confidence-medium: 38 92% 50%;
+    --confidence-medium-foreground: 0 0% 100%;
+    --confidence-medium-bg: 38 92% 95%;
+    --confidence-medium-border: 38 92% 85%;
+
+    --confidence-low: 0 84% 60%;
+    --confidence-low-foreground: 0 0% 100%;
+    --confidence-low-bg: 0 84% 95%;
+    --confidence-low-border: 0 84% 85%;
+
+    /* Status Colors */
+    --status-accepted: 122 39% 49%;
+    --status-pending: 38 92% 50%;
+    --status-rejected: 0 84% 60%;
+
+    /* Gradients */
+    --gradient-header: linear-gradient(135deg, hsl(215 100% 47%), hsl(215 100% 52%));
+    --gradient-confidence-high: linear-gradient(135deg, hsl(122 39% 49%), hsl(122 39% 55%));
+    --gradient-confidence-medium: linear-gradient(135deg, hsl(38 92% 50%), hsl(38 92% 55%));
+    --gradient-confidence-low: linear-gradient(135deg, hsl(0 84% 60%), hsl(0 84% 65%));
+
+    /* Shadows */
+    --shadow-sm: 0 1px 3px 0 hsl(215 25% 12% / 0.1);
+    --shadow-md: 0 4px 6px -1px hsl(215 25% 12% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(215 25% 12% / 0.1);
+    --shadow-confidence: 0 4px 12px hsl(215 100% 47% / 0.15);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 

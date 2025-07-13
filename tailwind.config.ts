@@ -52,6 +52,24 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				'confidence-high': {
+					DEFAULT: 'hsl(var(--confidence-high))',
+					foreground: 'hsl(var(--confidence-high-foreground))',
+					bg: 'hsl(var(--confidence-high-bg))',
+					border: 'hsl(var(--confidence-high-border))'
+				},
+				'confidence-medium': {
+					DEFAULT: 'hsl(var(--confidence-medium))',
+					foreground: 'hsl(var(--confidence-medium-foreground))',
+					bg: 'hsl(var(--confidence-medium-bg))',
+					border: 'hsl(var(--confidence-medium-border))'
+				},
+				'confidence-low': {
+					DEFAULT: 'hsl(var(--confidence-low))',
+					foreground: 'hsl(var(--confidence-low-foreground))',
+					bg: 'hsl(var(--confidence-low-bg))',
+					border: 'hsl(var(--confidence-low-border))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
