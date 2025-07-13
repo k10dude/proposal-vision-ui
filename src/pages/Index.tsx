@@ -1,7 +1,7 @@
-import { LOPReviewInterface } from '@/components/LOPReviewInterface';
+import DocumentUploadPage from '@/components/DocumentUploadPage';
 
 const Index = () => {
-  return <LOPReviewInterface />;
+  return <DocumentUploadPage />;
 };
 
 export default Index;
