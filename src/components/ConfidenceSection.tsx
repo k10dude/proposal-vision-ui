@@ -47,23 +47,34 @@ export const ConfidenceSection: React.FC<ConfidenceSectionProps> = ({
     const confidenceColor = getConfidenceColor();
 
     return (
-      <div className="grid grid-cols-12 gap-4 items-center py-3 border-b border-border/50 last:border-b-0">
+      <div className="grid grid-cols-12 gap-3 items-center py-3 border-b border-border/50 last:border-b-0">
         {/* Field Label */}
-        <div className="col-span-3">
+        <div className="col-span-2">
           <label className="text-sm font-medium text-foreground">
             {field.label}
             {field.required && <span className="text-destructive ml-1">*</span>}
           </label>
         </div>
 
-        {/* Editable Input */}
-        <div className="col-span-5">
+        {/* LOP Parsed Value */}
+        <div className="col-span-3">
           <Input
             value={currentValue}
             onChange={(e) => onFieldEdit(field.id, e.target.value)}
             className="text-sm"
             placeholder="Enter value..."
           />
+        </div>
+
+        {/* NetSuite Value */}
+        <div className="col-span-3">
+          <div className="text-sm p-2 bg-muted/50 rounded-md border min-h-[40px] flex items-center">
+            {field.netsuiteValue ? (
+              <span className="text-foreground">{field.netsuiteValue}</span>
+            ) : (
+              <span className="text-muted-foreground italic">Not set in NetSuite</span>
+            )}
+          </div>
         </div>
 
         {/* Confidence Score */}
@@ -115,11 +126,12 @@ export const ConfidenceSection: React.FC<ConfidenceSectionProps> = ({
             <AccordionContent className="px-4 pb-4">
               <div className="space-y-1">
                 {/* Header */}
-                <div className="grid grid-cols-12 gap-4 items-center py-2 text-xs font-medium text-muted-foreground border-b">
-                  <div className="col-span-3">Field</div>
-                  <div className="col-span-5">Value</div>
+                <div className="grid grid-cols-12 gap-3 items-center py-2 text-xs font-medium text-muted-foreground border-b">
+                  <div className="col-span-2">Field</div>
+                  <div className="col-span-3">LOP Parsed Value</div>
+                  <div className="col-span-3">NetSuite Value</div>
                   <div className="col-span-2">Confidence</div>
-                  <div className="col-span-2">Status</div>
+                  <div className="col-span-2">Accept</div>
                 </div>
                 
                 {/* Field Rows */}
