@@ -17,260 +17,287 @@ export interface ConfidenceGroups {
 export const mockLOPData: ConfidenceGroups = {
   highConfidence: [
     {
-      id: 'customer_name',
-      label: 'Customer Name',
-      value: 'Acme Corporation Inc.',
+      id: 'company_name',
+      label: 'Company name',
+      value: 'Global Tech Solutions Inc.',
       confidence: 98,
-      category: 'Customer Details',
+      category: 'Company',
       required: true,
-      netsuiteValue: 'Acme Corp'
+      netsuiteValue: 'Global Tech Solutions'
     },
     {
-      id: 'contract_value',
-      label: 'Total Contract Value',
-      value: '$2,450,000',
+      id: 'quoted_fee',
+      label: 'Quoted fee',
+      value: '$185,000',
       confidence: 96,
-      category: 'Deal Terms',
+      category: 'Invoice Instructions',
       required: true,
-      netsuiteValue: '$2,400,000'
+      netsuiteValue: '$180,000'
     },
     {
-      id: 'currency',
-      label: 'Currency',
+      id: 'quoted_currency',
+      label: 'Quoted currency',
       value: 'USD',
       confidence: 99,
-      category: 'Deal Terms',
+      category: 'Invoice Instructions',
       required: true,
       netsuiteValue: 'USD'
     },
     {
-      id: 'primary_contact',
-      label: 'Primary Contact',
-      value: 'John Smith',
-      confidence: 94,
-      category: 'Customer Details',
-      required: true,
-      netsuiteValue: 'J. Smith'
-    },
-    {
-      id: 'contract_duration',
-      label: 'Contract Duration',
-      value: '24 months',
-      confidence: 92,
-      category: 'Deal Terms',
-      required: true,
-      netsuiteValue: '24'
-    },
-    {
-      id: 'account_manager',
-      label: 'Account Manager',
-      value: 'Sarah Johnson',
-      confidence: 97,
-      category: 'Internal Details',
-      required: false,
-      netsuiteValue: 'Sarah J.'
-    },
-    {
-      id: 'delivery_method',
-      label: 'Delivery Method',
-      value: 'Cloud-based SaaS',
+      id: 'contract_date',
+      label: 'Contract date',
+      value: '2024-02-15',
       confidence: 95,
-      category: 'Service Details',
+      category: 'LoP',
       required: true,
-      netsuiteValue: ''
+      netsuiteValue: '2024-02-15'
     },
     {
-      id: 'billing_frequency',
-      label: 'Billing Frequency',
+      id: 'lop_signed_yn',
+      label: 'Lop signed Y/N',
+      value: 'Yes',
+      confidence: 97,
+      category: 'LoP',
+      required: true,
+      netsuiteValue: 'Yes'
+    },
+    {
+      id: 'payment_terms',
+      label: 'Payment terms',
+      value: 'Net 30 days',
+      confidence: 94,
+      category: 'Invoice Instructions',
+      required: true,
+      netsuiteValue: 'Net 30'
+    },
+    {
+      id: 'lead_consultant',
+      label: 'Lead Consultant',
+      value: 'Sarah Mitchell',
+      confidence: 92,
+      category: 'Execution',
+      required: true,
+      netsuiteValue: 'S. Mitchell'
+    },
+    {
+      id: 'invoicing_method',
+      label: 'Invoicing method',
       value: 'Monthly',
       confidence: 93,
-      category: 'Payment Info',
+      category: 'Invoice Instructions',
       required: true,
       netsuiteValue: 'Monthly'
     }
   ],
   mediumConfidence: [
     {
-      id: 'project_start_date',
-      label: 'Project Start Date',
-      value: '2024-03-15',
+      id: 'vat_id',
+      label: 'VAT ID',
+      value: 'GB123456789',
       confidence: 87,
-      category: 'Dates & Milestones',
+      category: 'Company',
       required: true,
-      netsuiteValue: '2024-03-01'
+      netsuiteValue: 'GB123456780'
     },
     {
-      id: 'implementation_timeline',
-      label: 'Implementation Timeline',
-      value: '6-8 weeks',
-      confidence: 82,
-      category: 'Dates & Milestones',
-      required: true,
-      netsuiteValue: '8 weeks'
-    },
-    {
-      id: 'customer_address',
-      label: 'Customer Address',
-      value: '123 Business Park, Suite 400, New York, NY 10001',
-      confidence: 79,
-      category: 'Customer Details',
-      required: true,
-      netsuiteValue: '123 Business Park, New York, NY'
-    },
-    {
-      id: 'payment_terms',
-      label: 'Payment Terms',
-      value: 'Net 30',
+      id: 'city',
+      label: 'City',
+      value: 'New York',
       confidence: 84,
-      category: 'Payment Info',
+      category: 'Company',
       required: true,
-      netsuiteValue: 'Net 30'
+      netsuiteValue: 'New York'
     },
     {
-      id: 'service_description',
-      label: 'Service Description',
-      value: 'Enterprise Analytics Platform with Custom Dashboards',
-      confidence: 76,
-      category: 'Service Details',
+      id: 'street',
+      label: 'Street',
+      value: '1234 Business Avenue',
+      confidence: 82,
+      category: 'Company',
       required: true,
-      netsuiteValue: ''
+      netsuiteValue: '1234 Business Ave'
     },
     {
-      id: 'renewal_terms',
-      label: 'Renewal Terms',
-      value: 'Auto-renewal with 60-day notice',
-      confidence: 73,
-      category: 'Deal Terms',
+      id: 'state',
+      label: 'State',
+      value: 'NY',
+      confidence: 89,
+      category: 'Company',
+      required: true,
+      netsuiteValue: 'NY'
+    },
+    {
+      id: 'zip',
+      label: 'Zip',
+      value: '10001',
+      confidence: 88,
+      category: 'Company',
+      required: true,
+      netsuiteValue: '10001'
+    },
+    {
+      id: 'number_of_instalments',
+      label: 'Number of instalments',
+      value: '3',
+      confidence: 79,
+      category: 'Invoice Instructions',
       required: false,
-      netsuiteValue: 'Manual renewal'
+      netsuiteValue: '2'
     },
     {
-      id: 'support_level',
-      label: 'Support Level',
-      value: 'Premium 24/7',
-      confidence: 81,
-      category: 'Service Details',
-      required: true,
-      netsuiteValue: 'Standard'
-    },
-    {
-      id: 'discount_applied',
-      label: 'Discount Applied',
-      value: '15% enterprise discount',
-      confidence: 78,
-      category: 'Deal Terms',
-      required: false,
-      netsuiteValue: '10%'
-    },
-    {
-      id: 'customer_industry',
-      label: 'Customer Industry',
-      value: 'Financial Services',
+      id: 'invoice_language',
+      label: 'Invoice language',
+      value: 'English',
       confidence: 85,
-      category: 'Customer Details',
+      category: 'Invoice Instructions',
+      required: true,
+      netsuiteValue: 'English'
+    },
+    {
+      id: 'po_number_needed',
+      label: 'PO number needed?',
+      value: 'Yes',
+      confidence: 76,
+      category: 'Invoice Instructions',
+      required: true,
+      netsuiteValue: 'No'
+    },
+    {
+      id: 'practice_group_1',
+      label: 'Practice Group 1',
+      value: 'Executive Search',
+      confidence: 81,
+      category: 'Coding',
+      required: true,
+      netsuiteValue: 'Exec Search'
+    },
+    {
+      id: 'success_fee',
+      label: 'Success fee',
+      value: '$25,000',
+      confidence: 78,
+      category: 'Invoice Plan',
       required: false,
-      netsuiteValue: 'Finance'
+      netsuiteValue: '$20,000'
     }
   ],
   lowConfidence: [
     {
-      id: 'billing_start_date',
-      label: 'Billing Start Date',
-      value: '2024-04-01',
+      id: 'additional_address_line',
+      label: 'Additional address line',
+      value: 'Suite 1200',
       confidence: 64,
-      category: 'Dates & Milestones',
-      required: true,
-      netsuiteValue: '2024-04-15'
+      category: 'Company',
+      required: false,
+      netsuiteValue: ''
     },
     {
-      id: 'escalation_terms',
-      label: 'Escalation Terms',
-      value: '5% annual increase',
+      id: 'country',
+      label: 'Country',
+      value: 'United States',
+      confidence: 68,
+      category: 'Company',
+      required: true,
+      netsuiteValue: 'USA'
+    },
+    {
+      id: 'candidate',
+      label: 'Candidate',
+      value: 'John Anderson',
       confidence: 58,
-      category: 'Deal Terms',
+      category: 'Expenses',
       required: false,
       netsuiteValue: ''
     },
     {
-      id: 'compliance_requirements',
-      label: 'Compliance Requirements',
-      value: 'SOC2 Type II, GDPR',
-      confidence: 67,
-      category: 'Service Details',
-      required: true,
-      netsuiteValue: 'SOC2'
+      id: 'consultant',
+      label: 'Consultant',
+      value: 'Michael Roberts',
+      confidence: 62,
+      category: 'Expenses',
+      required: false,
+      netsuiteValue: 'M. Roberts'
     },
     {
-      id: 'termination_clause',
-      label: 'Termination Clause',
-      value: '90-day written notice',
-      confidence: 61,
-      category: 'Deal Terms',
-      required: true,
-      netsuiteValue: '30-day notice'
-    },
-    {
-      id: 'customer_size',
-      label: 'Customer Size',
-      value: '500-1000 employees',
+      id: 'fixed_expenses_percentage',
+      label: 'Fixed expenses %',
+      value: '15%',
       confidence: 55,
-      category: 'Customer Details',
+      category: 'Expenses',
       required: false,
-      netsuiteValue: '750 employees'
+      netsuiteValue: '10%'
     },
     {
-      id: 'integration_requirements',
-      label: 'Integration Requirements',
-      value: 'Salesforce, Microsoft 365, SAP',
-      confidence: 69,
-      category: 'Service Details',
-      required: true,
-      netsuiteValue: 'Salesforce'
-    },
-    {
-      id: 'sla_requirements',
-      label: 'SLA Requirements',
-      value: '99.9% uptime guarantee',
-      confidence: 63,
-      category: 'Service Details',
-      required: true,
-      netsuiteValue: '99.5%'
-    },
-    {
-      id: 'training_included',
-      label: 'Training Included',
-      value: '40 hours initial training',
-      confidence: 52,
-      category: 'Service Details',
+      id: 'variable_expenses_threshold',
+      label: 'Variable expenses threshold',
+      value: '$5,000',
+      confidence: 61,
+      category: 'Expenses',
       required: false,
-      netsuiteValue: ''
+      netsuiteValue: '$3,000'
     },
     {
-      id: 'data_migration',
-      label: 'Data Migration',
-      value: 'Included for up to 5 data sources',
+      id: 'invoice_addressee_name',
+      label: 'Invoice addressee name',
+      value: 'Jennifer Walsh',
       confidence: 59,
-      category: 'Service Details',
+      category: 'External Team',
       required: true,
-      netsuiteValue: 'Not included'
+      netsuiteValue: 'J. Walsh'
     },
     {
-      id: 'penalty_clauses',
-      label: 'Penalty Clauses',
-      value: 'Late payment: 1.5% monthly',
+      id: 'invoice_addressee_email',
+      label: 'Invoice addressee email',
+      value: 'j.walsh@globaltech.com',
+      confidence: 67,
+      category: 'External Team',
+      required: true,
+      netsuiteValue: 'jennifer.walsh@globaltech.com'
+    },
+    {
+      id: 'lop_signed_date',
+      label: 'Lop signed date',
+      value: '2024-02-20',
+      confidence: 52,
+      category: 'LoP',
+      required: true,
+      netsuiteValue: ''
+    },
+    {
+      id: 'confidential',
+      label: 'Confidential',
+      value: 'Yes',
       confidence: 45,
-      category: 'Payment Info',
+      category: 'Execution',
       required: false,
-      netsuiteValue: '1% monthly'
+      netsuiteValue: 'No'
     },
     {
-      id: 'customer_references',
-      label: 'Customer References',
-      value: 'May be used as case study',
+      id: 'sustainability',
+      label: 'Sustainability?',
+      value: 'Yes',
       confidence: 48,
-      category: 'Customer Details',
+      category: 'Coding',
       required: false,
       netsuiteValue: ''
+    },
+    {
+      id: 'milestone_date',
+      label: 'Milestone date',
+      value: '2024-04-30',
+      confidence: 63,
+      category: 'Invoice Plan',
+      required: false,
+      netsuiteValue: '2024-05-15'
+    },
+    {
+      id: 'e_billing_yn',
+      label: 'e- billing Y/N',
+      value: 'No',
+      confidence: 57,
+      category: 'Invoice Instructions',
+      required: false,
+      netsuiteValue: 'Yes'
     }
   ]
 };
